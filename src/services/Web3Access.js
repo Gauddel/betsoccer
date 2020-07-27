@@ -5,7 +5,9 @@ class Web3Access {
     web3;
 
     constructor () {
-        this.web3 = new Web3(window.web3.currentProvider);
+        window.ethereum.enable().then(() => {
+            this.web3 = new Web3(window.ethereum);
+        })
     }
 
 

@@ -3,6 +3,7 @@ import logo from './images/Soccer Bet.png';
 import './App.css';
 import Competitions from './components/Competitions';
 import Bets from './components/Bets';
+import Web3Access from './services/Web3Access';
 
 require('dotenv').config();
 
@@ -18,6 +19,8 @@ class App extends React.Component {
     this.getCompetitionReset = this.getCompetitionReset.bind(this);
     this.resetCompetition = this.resetCompetition.bind(this);
     this.getVue = this.getVue.bind(this);
+    //Init Web3 
+    Web3Access.GetInstance();
   }
 
   resetCompetition() {
